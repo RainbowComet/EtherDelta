@@ -82,23 +82,116 @@
 </header>
 
 <main class="main container">
-    <div class="main-column">
-        <section class="section">
+    <div class="main-column main-column--1">
+        <section class="section balance">
             <div class="section__title">
                 Balance
             </div>
+            <div class="balance__tabs">
+                <button class="btn balance__tab balance__tab--active" type="button">Deposit</button>
+                <button class="btn balance__tab" type="button">Withdraw</button>
+                <button class="btn balance__tab" type="button">Transfer</button>
+            </div>
+
+            <div class="balance__info balance__info--with-header">
+                <div class="balance__info-column">
+                    <div class="balance__info-title">Token</div>
+                    <div class="balance__info-value">PPT</div>
+                </div>
+                <div class="balance__info-column">
+                    <div class="balance__info-title balance__info-column--2">Wallet</div>
+                    <div class="balance__info-value">0</div>
+                </div>
+                <div class="balance__info-column balance__info-column--3">
+                    <div class="balance__info-title">EtherDelta</div>
+                    <div class="balance__info-value">0</div>
+                </div>
+            </div>
+
+            <form action="#" method="post" class="balance__form balance__form--ppt">
+                <div class="balance__form-item">
+                    <label class="balance__form-label label" for="ppt-amount">Deposit PPT</label>
+                    <input class="balance__form-input input" type="text" id="ppt-amount" placeholder="Amount">
+                </div>
+                <button class="btn balance__form-btn" type="submit">Deposit</button>
+            </form>
+
+            <div class="balance__info">
+                <div class="balance__info-column">
+                    <div class="balance__info-value">PPT</div>
+                </div>
+                <div class="balance__info-column balance__info-column--2">
+                    <div class="balance__info-value">0</div>
+                </div>
+                <div class="balance__info-column balance__info-column--3">
+                    <div class="balance__info-value">0</div>
+                </div>
+            </div>
+
+            <form action="#" method="post" class="balance__form">
+                <div class="balance__form-item">
+                    <label class="balance__form-label label" for="eth-amount">Deposit ETH</label>
+                    <input class="balance__form-input input" type="text" id="eth-amount" placeholder="Amount">
+                </div>
+                <button class="btn balance__form-btn" type="submit">Deposit</button>
+            </form>
+
+            <p class="balance__desc">
+                Make sure <u>PPT</u> is the token you actually want to trade.<br>
+                Multiple tokens can share the same name.
+
+            </p>
+
+
         </section>
-        <section class="section">
+        <section class="section buy-sell">
             <div class="section__title">
                 Buy/Sell
             </div>
 
+            <div class="buy-sell__tabs">
+                <button class="btn buy-sell__tab buy-sell__tab--active" type="button">Buy Order</button>
+                <button class="btn buy-sell__tab" type="button">Sell Order</button>
+            </div>
+
+            <form action="#" method="post" class="buy-sell__form">
+                <div class="buy-sell__form-item">
+                    <div class="buy-sell__overlay">PPT</div>
+                    <label class="buy-sell__form-label label" for="buy-amount">Amount to buy</label>
+                    <input class="buy-sell__form-input input" type="text" id="buy-amount" placeholder="">
+                </div>
+                <div class="buy-sell__form-item">
+                    <div class="buy-sell__overlay">ETH</div>
+                    <label class="buy-sell__form-label label" for="price">Price</label>
+                    <input class="buy-sell__form-input input" type="text" id="price" placeholder="">
+                </div>
+                <div class="buy-sell__form-item">
+                    <label class="buy-sell__form-label label" for="total">Total</label>
+                    <input class="buy-sell__form-input input" type="text" id="total" placeholder="">
+                </div>
+                <div class="buy-sell__form-item">
+                    <div class="buy-sell__overlay">Blocks</div>
+                    <label class="buy-sell__form-label label" for="expires">Expires</label>
+                    <input class="buy-sell__form-input input" type="text" id="expires" value="10000">
+                </div>
+
+
+
+                <button class="btn buy-sell__form-btn" type="submit">Buy Order</button>
+            </form>
+
         </section>
     </div>
-    <div class="main-column">
-        <section class="section">
+    <div class="main-column main-column--2">
+        <section class="section section--order-book">
             <div class="section__title">
                 Order Book
+            </div>
+            <button class="section__login-btn btn js-login-btn" type="button">Login</button>
+
+            <div class="section__dummy-img-wrapper">
+                <div class="section__overlay"></div>
+                <img class="section__dummy-img" src="img/dummy2.jpg" alt="dummy">
             </div>
         </section>
 
@@ -113,18 +206,31 @@
             <div class="section__title">
                 Your Transactions
             </div>
+            <div class="transactions__tabs">
+                <button class="btn transactions__tab" type="button">Trades</button>
+                <button class="btn transactions__tab" type="button">Orders</button>
+                <button class="btn transactions__tab" type="button">Funds</button>
+            </div>
         </section>
     </div>
-    <div class="main-column">
-        <section class="section">
+    <div class="main-column main-column--3">
+        <section class="section section--trades">
             <div class="section__title">
                 Trades & Volume
             </div>
+            <button class="section__login-btn btn js-login-btn" type="button">Login</button>
+
+            <div class="section__dummy-img-wrapper">
+                <div class="section__overlay"></div>
+                <img class="section__dummy-img" src="img/dummy1.jpg" alt="dummy">
+            </div>
         </section>
-        <section class="section">
+        <section class="section section--updates">
             <div class="section__title">
                 Updates
             </div>
+            <button class="section__login-btn btn js-login-btn" type="button">Login</button>
+
         </section>
     </div>
 </main>
