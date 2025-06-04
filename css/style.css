@@ -767,7 +767,7 @@ a:not(.disabled):hover {
 
     .header__nav.open {
         display: flex;
-        z-index: 10;
+        z-index: 100;
         align-items: start;
     }
 }
