@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>EtherDelta</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css"/>
     <link rel="stylesheet" href="css/style.css"/>
-
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
 <header class="header">
-    <img class="header__logo" src="img/logo.png" alt="Logo">
-    <div class="header__squares">
+    <img class="header__logo" src="img/logo.svg" alt="Logo">
+    <div class="header__squares header__squares--desktop">
         <div class="header__square header__square--black">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="15" height="15" fill="#636265"/>
@@ -25,7 +28,7 @@
             </svg>
         </div>
     </div>
-    <div class="header__select">
+    <div class="header__select header__select--desktop">
         <span>PPT</span>
         <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.199439 2.01238C-0.185461 1.34572 0.295664 0.512382 1.06546 0.512382L3.75629 0.512382C4.52609 0.512382 5.00721 1.34572 4.62231 2.01238L3.2769 4.3427C2.892 5.00937 1.92975 5.00937 1.54485 4.3427L0.199439 2.01238Z"
@@ -33,7 +36,36 @@
         </svg>
     </div>
 
-    <nav class="header__nav">
+    <button class="hamburger" id="hamburger" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="header__nav" id="mobileMenu">
+
+        <div class="header__nav-mobile-block">
+            <div class="header__squares">
+                <div class="header__square header__square--black">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="15" height="15" fill="#636265"/>
+                    </svg>
+                </div>
+                <div class="header__square header__square--white">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="14" height="14" fill="#FFF9F9" stroke="#636265"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="header__select">
+                <span>PPT</span>
+                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.199439 2.01238C-0.185461 1.34572 0.295664 0.512382 1.06546 0.512382L3.75629 0.512382C4.52609 0.512382 5.00721 1.34572 4.62231 2.01238L3.2769 4.3427C2.892 5.00937 1.92975 5.00937 1.54485 4.3427L0.199439 2.01238Z"
+                          fill="#4B4A4C"/>
+                </svg>
+            </div>
+        </div>
+
         <button class="btn header__nav-btn" type="button">
             <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.4377 11.0535C16.2357 10.2671 16.7145 9.28052 16.7145 8.20396C16.7145 5.88253 14.4946 3.96445 11.6015 3.62204C10.6875 1.95061 8.54015 0.775391 6.03591 0.775391C2.70176 0.775391 0.000195439 2.85307 0.000195439 5.41825C0.000195439 6.49191 0.47899 7.47852 1.27698 8.2678C0.833008 9.15865 0.194615 9.84927 0.183008 9.86088C0.000195445 10.0553 -0.0520367 10.3397 0.0553294 10.5863C0.159794 10.833 0.403544 10.9926 0.670508 10.9926C2.22296 10.9926 3.47653 10.4064 4.30354 9.86668C4.57051 9.92762 4.84618 9.97405 5.12765 10.0089C6.03881 11.6745 8.17743 12.8468 10.6788 12.8468C11.2823 12.8468 11.8627 12.7772 12.414 12.6495C13.241 13.1863 14.4917 13.7754 16.0471 13.7754C16.314 13.7754 16.5549 13.6158 16.6622 13.3691C16.7667 13.1225 16.7174 12.8381 16.5346 12.6437C16.523 12.635 15.8817 11.9444 15.4377 11.0535ZM4.03948 8.37517L3.54328 8.69727C3.13412 8.96133 2.71627 9.17026 2.29261 9.31825C2.37095 9.18186 2.4493 9.03677 2.52475 8.88878L2.97453 7.98633L2.25488 7.27539C1.86314 6.88655 1.39305 6.25106 1.39305 5.41825C1.39305 3.65686 3.52006 2.16825 6.03591 2.16825C8.55176 2.16825 10.6788 3.65686 10.6788 5.41825C10.6788 7.17963 8.55176 8.66825 6.03591 8.66825C5.55711 8.66825 5.07832 8.61311 4.61403 8.50575L4.03948 8.37517ZM14.4598 10.0611L13.7431 10.7691L14.1928 11.6716C14.2683 11.8196 14.3466 11.9647 14.425 12.1011C14.0013 11.9531 13.5835 11.7441 13.1743 11.4801L12.6781 11.158L12.1006 11.2915C11.6364 11.3988 11.1576 11.454 10.6788 11.454C9.1118 11.454 7.71314 10.8707 6.86872 10.0118C9.80823 9.69838 12.0716 7.76579 12.0716 5.41825C12.0716 5.31959 12.06 5.22383 12.0513 5.12807C13.9201 5.54883 15.3216 6.77628 15.3216 8.20396C15.3216 9.03677 14.8515 9.67227 14.4598 10.0611Z"
@@ -176,7 +208,6 @@
                 </div>
 
 
-
                 <button class="btn buy-sell__form-btn" type="submit">Buy Order</button>
             </form>
 
@@ -196,13 +227,56 @@
         </section>
 
     </div>
-    <div class="main-column">
-        <section class="section">
+    <div class="main-column main-column--4">
+        <section class="section price-chart">
             <div class="section__title">
                 Price Chart
             </div>
+
+            <div class="price-chart__info">
+                <div class="price-chart__info-currency">PPT/ETH</div>
+                <svg class="price-chart__info-icon" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.66127 6.72827L6.45424 3.00952C6.36244 2.90308 6.18569 2.90308 6.09291 3.00952L2.88588 6.72827C2.76674 6.86694 2.87416 7.07007 3.06655 7.07007L9.48061 7.07007C9.67299 7.07007 9.78041 6.86694 9.66127 6.72827Z"
+                          fill="#27AE60"/>
+                </svg>
+                <div class="price-chart__info-value">0.015055</div>
+                <div class="price-chart__info-percent">+2.74%</div>
+            </div>
+
+            <div class="price-chart__hours">
+                <button class="price-chart__hours-item btn" type="button">1H</button>
+                <button class="price-chart__hours-item btn" type="button">2H</button>
+                <button class="price-chart__hours-item btn" type="button">6H</button>
+                <button class="price-chart__hours-item btn" type="button">24H</button>
+            </div>
+
+            <div class="chart">
+                <div class="chart-column">
+                    <img class="chart__dummy-img" src="img/dummy-chart.png" alt="chart">
+                    <div class="chart__months">
+                        <button class="chart__months-item btn" type="button">May</button>
+                        <button class="chart__months-item btn" type="button">Jun</button>
+                        <button class="chart__months-item btn" type="button">Jul</button>
+                        <button class="chart__months-item btn" type="button">Aug</button>
+                        <button class="chart__months-item btn" type="button">Sep</button>
+                        <button class="chart__months-item btn" type="button">Oct</button>
+                        <button class="chart__months-item btn" type="button">Nov</button>
+                        <button class="chart__months-item btn" type="button">Dec</button>
+                    </div>
+                </div>
+                <div class="chart-column chart__price">
+                    <button class="chart__price-item chart__price-item--active btn js-price-btn" type="button">$1569</button>
+                    <button class="chart__price-item btn js-price-btn" type="button">$1500</button>
+                    <button class="chart__price-item btn js-price-btn" type="button">$1450</button>
+                    <button class="chart__price-item btn js-price-btn" type="button">$1400</button>
+                    <button class="chart__price-item btn js-price-btn" type="button">$1350</button>
+                </div>
+            </div>
+
+
         </section>
-        <section class="section">
+        <section class="section transactions">
             <div class="section__title">
                 Your Transactions
             </div>
