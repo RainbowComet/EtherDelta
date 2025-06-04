@@ -151,19 +151,42 @@ a:not(.disabled):hover {
     border: 0.70px solid #fff;
 }
 
-.header__nav-btn:hover {
-    border: 0.70px solid #636265;
-    border-radius: 3px;
+
+
+@media (hover: hover) and (pointer: fine) {
+    .header__nav-btn:hover {
+        border: 0.70px solid #636265;
+        border-radius: 3px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .header__nav-btn:active {
+        border: 0.70px solid #636265;
+        border-radius: 3px;
+    }
 }
 
 .header__nav-btn--account {
     color: #EE2E2E;
 }
 
-.header__nav-btn--account:hover {
-    color: #06d6a0;
-    border: 0.70px solid #06d6a0;
-    transition: 0.5s ease;
+
+
+@media (hover: hover) and (pointer: fine) {
+    .header__nav-btn--account:hover {
+        color: #06d6a0;
+        border: 0.70px solid #06d6a0;
+        transition: 0.5s ease;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .header__nav-btn--account:active {
+        color: #06d6a0;
+        border: 0.70px solid #06d6a0;
+        transition: 0.5s ease;
+    }
 }
 
 .header__nav-btn--account svg {
@@ -171,9 +194,21 @@ a:not(.disabled):hover {
     transition: 0.5s ease;
 }
 
-.header__nav-btn--account:hover svg {
-    fill: #06d6a0;
-    transition: 0.5s ease;
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    .header__nav-btn--account:hover svg {
+        fill: #06d6a0;
+        transition: 0.5s ease;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .header__nav-btn--account:active svg {
+        fill: #06d6a0;
+        transition: 0.5s ease;
+    }
 }
 
 .main {
@@ -441,8 +476,19 @@ a:not(.disabled):hover {
     max-width: 90px;
 }
 
-.balance__form-btn:hover {
-    background: #252525;
+
+
+
+@media (hover: hover) and (pointer: fine) {
+    .balance__form-btn:hover {
+        background: #252525;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .balance__form-btn:active {
+        background: #252525;
+    }
 }
 
 .balance__desc {
@@ -504,8 +550,18 @@ a:not(.disabled):hover {
     border-radius: 2px;
 }
 
-.buy-sell__form-btn:hover {
-    background: #004a36;
+
+
+@media (hover: hover) and (pointer: fine) {
+    .buy-sell__form-btn:hover {
+        background: #004a36;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .buy-sell__form-btn:active {
+        background: #004a36;
+    }
 }
 
 .buy-sell__form-item + .buy-sell__form-item {
