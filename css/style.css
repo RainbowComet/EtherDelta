@@ -702,6 +702,7 @@ a:not(.disabled):hover {
     max-height: 70%;
     margin-bottom: 10px;
     padding-top: 6px;
+    padding-bottom: 26px;
 }
 
 .red-text {
@@ -834,7 +835,7 @@ a:not(.disabled):hover {
 
     .header {
         padding: 0.688rem 1.563rem; /* 11px 25px */
-        height: 2.625rem; /* 42px */
+        /*height: 2.625rem;*/ /* 42px */
     }
 
     .hamburger {
@@ -1207,8 +1208,13 @@ a:not(.disabled):hover {
     }
 
     .main {
-        height: calc(100vh - 2.625rem);
+        /*height: calc(100vh - 2.625rem);*/
         max-height: unset;
+    }
+
+    .section--updates {
+        flex: 1 1 auto;
+        min-height: 0;
     }
 }
 
