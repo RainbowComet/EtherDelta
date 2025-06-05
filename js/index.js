@@ -24,3 +24,4 @@ hamburger.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
     hamburger.classList.toggle('open');
 });
+
