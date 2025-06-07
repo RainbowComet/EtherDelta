@@ -1,0 +1,237 @@
+.popup-overlay {
+    background: rgba(46, 48, 71, 0.6);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+
+
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.is-visible {
+    display: flex;
+    opacity: 1;
+}
+
+.popup {
+    width: 421px;
+    background: #fff;
+}
+
+.popup__header {
+    background: #393c43;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup__back-btn {
+    width: max-content;
+}
+
+.popup__close-btn {
+
+    width: max-content;
+}
+
+.popup__header-title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.01em;
+    color: #fff;
+}
+
+.popup__btns {
+    background: #fff;
+    padding: 32.7px 32.7px 49px 32.7px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8.6px;
+
+}
+
+.popup__btn {
+    border: 0.86px solid #999;
+    border-radius: 4px;
+    background: #fffdfd;
+    padding: 12px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 12px;
+}
+
+.popup__btn span {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #525151;
+}
+
+.popup__submit-btn {
+    margin-top: 33px;
+    border-radius: 26px;
+    background: #06d6a0;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #fff;
+    padding: 12px;
+}
+
+.popup__submit-btn:hover {
+    background: #004a36;
+}
+
+.popup__submit-btn:disabled {
+    background: #999;
+    cursor: default;
+}
+
+.checked-icon {
+    margin-left: auto;
+    opacity: 0;
+}
+
+.popup__btn-1.popup__btn--active svg {
+    fill: #06d6a0;
+}
+
+.popup__btn-2.popup__btn--active svg {
+    fill: #06d6a0;
+    stroke: #06d6a0;
+}
+
+.popup__btn-3.popup__btn--active svg {
+    fill: #06d6a0;
+    stroke: #06d6a0;
+}
+
+.popup__btn-1 svg {
+    fill: #525151;
+}
+
+.popup__btn-2 svg {
+    fill: #525151;
+    stroke: #525151;
+}
+
+.popup__btn-3 svg {
+    fill: #525151;
+    stroke: #525151;
+}
+
+.popup__btn.popup__btn--active .checked-icon {
+    opacity: 1;
+}
+
+.popup__btn.popup__btn--active {
+    border: 0.86px solid #06d6a0;
+}
+
+.popup__login-option-popup-1 {
+    padding: 12px 32px 49px 32px;
+}
+
+.popup__desc {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 107%;
+    letter-spacing: 0.01em;
+    color: #3c3b3b;
+    margin-bottom: 9px;
+}
+
+.popup__textarea {
+    width: 100%;
+    padding: 12px 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 136%;
+    letter-spacing: 0.01em;
+    color: #525151;
+    border: 0.86px solid #999;
+    border-radius: 4px;
+    background: #fffdfd;
+    margin-bottom: 7px;
+    resize: none;
+    height: 96px;
+}
+
+.popup__textarea:focus {
+    outline: none;
+}
+
+.popup__textarea::placeholder {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 188%;
+    letter-spacing: 0.01em;
+    color: #525151;
+}
+
+.popup__textarea--error {
+    border: 0.86px solid #d01010!important;
+}
+
+.popup__textarea--active {
+    border: 0.86px solid #06d6a0;
+}
+
+.popup__paste-btn {
+    max-width: max-content;
+    margin-left: auto;
+    border-radius: 15px;
+    background: #06d6a0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #fff;
+    padding: 1px 10px;
+    margin-bottom: 48px;
+}
+
+.popup__paste-btn:hover {
+    background: #004a36;
+}
+
+.error-popup {
+    padding: 24px;
+    width: max-content;
+    background: #e05d6f;
+    position: absolute;
+    bottom: 26px;
+    right: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 107%;
+    letter-spacing: 0.01em;
+    color: #fff;
+    transition: 0.3s ease;
+    z-index: 50000;
+}
+
+.error-popup__close-btn {
+    margin-left: auto;
+    width: max-content;
+}
+
