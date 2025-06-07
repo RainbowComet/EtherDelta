@@ -1,4 +1,41 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 .popup-overlay {
+    font-family: 'Gilroy', sans-serif;
+
     background: rgba(46, 48, 71, 0.6);
     position: fixed;
     width: 100vw;
@@ -13,7 +50,7 @@
 
     display: none;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 
 .popup-overlay.is-visible {
@@ -21,9 +58,16 @@
     opacity: 1;
 }
 
+.popup.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .popup {
     width: 421px;
     background: #fff;
+    transform: translateY(-18px);
+    transition: 0.5s ease;
 }
 
 .popup__header {
@@ -139,7 +183,12 @@
     opacity: 1;
 }
 
-.popup__btn.popup__btn--active {
+.popup__btn.popup__btn--active span {
+    font-weight: 700;
+}
+
+.popup__btn.popup__btn--active,
+.popup__btn:hover {
     border: 0.86px solid #06d6a0;
 }
 
@@ -172,12 +221,29 @@
     height: 96px;
 }
 
-.popup__textarea:focus {
+.popup__input {
+    width: 100%;
+    padding: 12px 10px;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 136%;
+    letter-spacing: 0.01em;
+    color: #525151;
+    border: 0.86px solid #999;
+    border-radius: 4px;
+    background: #fffdfd;
+    margin-bottom: 7px;
+    height: 41px;
+}
+
+.popup__textarea:focus,
+.popup__input:focus {
     outline: none;
 }
 
-.popup__textarea::placeholder {
-    font-weight: 500;
+.popup__textarea::placeholder.
+.popup__input::placeholder {
+    font-weight: 400;
     font-size: 11px;
     line-height: 188%;
     letter-spacing: 0.01em;
@@ -185,7 +251,7 @@
 }
 
 .popup__textarea--error {
-    border: 0.86px solid #d01010!important;
+    border: 0.86px solid #d01010 !important;
 }
 
 .popup__textarea--active {
@@ -214,7 +280,7 @@
     padding: 24px;
     width: max-content;
     background: #e05d6f;
-    position: absolute;
+    position: fixed;
     bottom: 26px;
     right: 63px;
     display: flex;
@@ -235,3 +301,169 @@
     width: max-content;
 }
 
+.login-option-popup-2 .popup__desc {
+    margin-right: -7px;
+}
+
+.popup__input-wrapper {
+    position: relative;
+}
+
+.popup__pass-btn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+.popup__pass-btn {
+    max-width: max-content;
+}
+
+.popup__password-input {
+    padding-right: 34px;
+}
+
+.login-option-popup-3 .popup__desc {
+    max-width: 243px;
+}
+
+@media (max-width: 870px) {
+    .error-popup {
+        bottom: 15px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .error-popup {
+        width: 100vw;
+        right: 0;
+    }
+}
+
+@media (min-width: 1566px) {
+
+    .popup {
+        width: 26.3rem; /* 421px */
+        transform: translateY(-1.125rem); /* -18px */
+    }
+
+    .popup__header {
+        padding: 0.9375rem 1.25rem; /* 15px 20px */
+    }
+
+    .popup__header-title {
+        font-size: 0.9375rem; /* 15px */
+        letter-spacing: 0.01em;
+    }
+
+    .popup__btns {
+        padding: 2.04375rem 2.04375rem 3.0625rem 2.04375rem; /* 32.7px, 49px */
+        gap: 0.5375rem; /* 8.6px */
+    }
+
+    .popup__btn {
+        border: 0.05375rem solid #999; /* 0.86px */
+        border-radius: 0.25rem; /* 4px */
+        padding: 0.75rem 1.4375rem; /* 12px 23px */
+        gap: 0.75rem;
+    }
+
+    .popup__btn span {
+        font-size: 0.8125rem; /* 13px */
+        letter-spacing: 0.01em;
+    }
+
+    .popup__submit-btn {
+        margin-top: 2.0625rem; /* 33px */
+        border-radius: 1.625rem; /* 26px */
+        font-size: 0.8125rem;
+        letter-spacing: 0.01em;
+        padding: 0.75rem;
+    }
+
+    .popup__btn.popup__btn--active {
+        border: 0.05375rem solid #06d6a0;
+    }
+
+    .popup__login-option-popup-1 {
+        padding: 0.75rem 2rem 3.0625rem 2rem;
+    }
+
+    .popup__desc {
+        font-size: 0.875rem; /* 14px */
+        letter-spacing: 0.01em;
+        margin-bottom: 0.5625rem; /* 9px */
+    }
+
+    .popup__textarea,
+    .popup__input {
+        padding: 0.75rem 0.625rem;
+        font-size: 0.6875rem; /* 11px */
+        letter-spacing: 0.01em;
+        color: #525151;
+        border: 0.05375rem solid #999;
+        border-radius: 0.25rem;
+        margin-bottom: 0.4375rem; /* 7px */
+    }
+
+    .popup__textarea {
+        height: 6rem; /* 96px */
+    }
+
+    .popup__input {
+        height: 2.5625rem; /* 41px */
+    }
+
+    .popup__textarea::placeholder,
+    .popup__input::placeholder {
+        font-size: 0.6875rem;
+        line-height: 1.88;
+        letter-spacing: 0.01em;
+    }
+
+    .popup__textarea--error {
+        border: 0.05375rem solid #d01010 !important;
+    }
+
+    .popup__textarea--active {
+        border: 0.05375rem solid #06d6a0;
+    }
+
+    .popup__paste-btn {
+        border-radius: 0.9375rem;
+        font-size: 0.8125rem;
+        letter-spacing: 0.01em;
+        padding: 0.0625rem 0.625rem;
+        margin-bottom: 3rem;
+    }
+
+    .error-popup {
+        padding: 1.5rem;
+        bottom: 1.625rem;
+        right: 3.9375rem;
+        gap: 1rem;
+        font-size: 0.875rem;
+        line-height: 1.07;
+        letter-spacing: 0.01em;
+        transition: 0.3s ease;
+    }
+
+    .popup__pass-btn {
+        top: 0.75rem;
+        right: 0.625rem;
+    }
+
+    .popup__password-input {
+        padding-right: 2.125rem;
+    }
+
+    .login-option-popup-2 .popup__desc {
+        margin-right: -0.4375rem;
+    }
+
+    .login-option-popup-3 .popup__desc {
+        max-width: 15.1875rem; /* 243px */
+    }
+
+}
