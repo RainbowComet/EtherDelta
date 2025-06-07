@@ -343,7 +343,7 @@
 <div class="popup-overlay login-option-popup">
     <div class="popup">
         <div class="popup__header">
-            <button type="button" class="popup__back-btn btn js-back-btn">
+            <button type="button" class="popup__back-btn btn js-back-btn" style="opacity: 0; cursor: default" disabled>
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.0727539 8.06445C0.0773112 7.90495 0.109212 7.75911 0.168457 7.62695C0.227702 7.49479 0.318848 7.36719 0.441895 7.24414L7.2915 0.613281C7.48747 0.417318 7.729 0.319336 8.01611 0.319336C8.20752 0.319336 8.3807 0.364909 8.53564 0.456055C8.69515 0.547201 8.82048 0.670247 8.91162 0.825195C9.00732 0.980143 9.05518 1.15332 9.05518 1.34473C9.05518 1.62728 8.94808 1.87565 8.73389 2.08984L2.54053 8.05762L8.73389 14.0322C8.94808 14.251 9.05518 14.4993 9.05518 14.7773C9.05518 14.9733 9.00732 15.1488 8.91162 15.3037C8.82048 15.4587 8.69515 15.5817 8.53564 15.6729C8.3807 15.7686 8.20752 15.8164 8.01611 15.8164C7.729 15.8164 7.48747 15.7161 7.2915 15.5156L0.441895 8.88477C0.31429 8.76172 0.220866 8.63411 0.161621 8.50195C0.102376 8.36523 0.0727539 8.2194 0.0727539 8.06445Z"
                           fill="white"/>
@@ -437,8 +437,8 @@
             </button>
         </div>
         <form action="" method="post" class="popup__login-option-popup-1">
-            <p class="popup__desc">Please enter the mnemonic phrase in the
-                Ethereum Blockchain</p>
+            <p class="popup__desc">Please enter the Mnemonic Phrase in the Ethereum
+                Blockchain to log into the wallet</p>
             <textarea class="popup__textarea" name="phrase" id="phrase"
                       placeholder="Enter or paste Mnemonic Phrase"></textarea>
             <div class="popup__paste-btn btn js-paste-btn">
@@ -476,7 +476,7 @@
                 to log into the wallet</p>
             <textarea class="popup__textarea" name="key" id="key" placeholder="Enter or paste Private Key"></textarea>
             <div class="popup__paste-btn btn js-paste-key-btn">
-                Paste key
+                Paste private key
             </div>
 
             <button class="popup__submit-btn btn js-login-option-2-submit-btn" disabled>
