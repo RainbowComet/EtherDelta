@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+	
+	//кнопки выбора варинтов входа
+	
     const optionButtons = document.querySelectorAll('.js-login-option-btn');
     const submitButton = document.querySelector('.js-login-option-submit-btn');
 
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const fadeDuration = 500;
 
+	//скрытие/появление попапов
     function fadeOut(el) {
         el.style.transition = `opacity ${fadeDuration}ms ease`;
         el.style.opacity = 0;
@@ -45,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+	//кнопки назад из разных попапов входа
     const openButtons = document.querySelectorAll(".js-open-login-option-popup-btn");
 
     openButtons.forEach((openBtn) => {
@@ -66,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+	//сабмит выбора варианта входа
     document.querySelectorAll('.js-login-option-submit-btn').forEach(btn => {
         btn.addEventListener('click', function () {
             const currentOverlay = this.closest('.popup-overlay');
@@ -124,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+	//вызов попапа выбора вариантов входа
     document.querySelectorAll('.js-login-btn').forEach(btn => {
         btn.addEventListener('click', function () {
             const popup = document.querySelector('.login-option-popup');
@@ -145,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const overlaySelector = '.popup-overlay';
     const popupSelector = '.popup';
-
+	//закрытие попапов
     document.querySelectorAll(overlaySelector).forEach(popupOverlay => {
         const popup = popupOverlay.querySelector(popupSelector);
 
@@ -162,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+	//кнопка вставки фразы
     const pasteBtn = document.querySelector(".js-paste-btn");
     const phraseInput = document.querySelector("#phrase");
 
@@ -180,6 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+	//кнопка вставки ключа
     const pasteBtn = document.querySelector(".js-paste-key-btn");
     const keyInput = document.querySelector("#key");
 
@@ -198,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+	//кнопка вставки пароля
     const pasteBtn = document.querySelector(".js-paste-password-btn");
     const keyInput = document.querySelector("#password");
 
@@ -216,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+	//поле фразы
     const phraseInput = document.querySelector("#phrase");
     const submitBtn = document.querySelector(".js-login-option-1-submit-btn");
 
@@ -234,6 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 document.addEventListener("DOMContentLoaded", function () {
+	//поле ключа
     const phraseInput = document.querySelector("#key");
     const submitBtn = document.querySelector(".js-login-option-2-submit-btn");
 
@@ -252,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 document.addEventListener("DOMContentLoaded", function () {
+	//поле пароля
     const phraseInput = document.querySelector("#password");
     const submitBtn = document.querySelector(".js-login-option-3-submit-btn");
 
@@ -270,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//клик по сабит кнопке в первом варианте входа
 document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.querySelector(".js-login-option-1-submit-btn");
     const phraseInput = document.querySelector("#phrase");
@@ -305,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
+//клик по сабит кнопке в втором варианте входа
 document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.querySelector(".js-login-option-2-submit-btn");
     const phraseInput = document.querySelector("#key");
@@ -341,6 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+//клик по сабит кнопке в третьем варианте входа
 document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.querySelector(".js-login-option-3-submit-btn");
     const phraseInput = document.querySelector("#password");
@@ -377,7 +392,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
+//скрытие маленького попапа ошибки
 document.addEventListener("DOMContentLoaded", function () {
     const errorPopup = document.querySelector(".error-popup");
     const closeErrorBtn = document.querySelector(".js-close-error-popup-btn");
@@ -392,6 +407,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//кнопки скрыть/показать пароль
 const passwordInput = document.getElementById('password');
 const showPassBtn = document.getElementById('show-pass');
 const hidePassBtn = document.getElementById('hide-pass');

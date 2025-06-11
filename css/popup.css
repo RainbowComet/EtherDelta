@@ -343,6 +343,12 @@
 
 @media (min-width: 1566px) {
 
+    .header__nav-btn svg {
+        height: 0.875rem;
+        width: 30%;
+        max-height: 30px;
+    }
+
     .popup {
         width: 26.3rem; /* 421px */
         transform: translateY(-1.125rem); /* -18px */
